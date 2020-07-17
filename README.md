@@ -4,4 +4,5 @@ SIMPLE TOOL Programmed By Python  SEARCH For Wordpress Database Backup And Infor
       # TOOL IS FASTES
 # USAGE : 
       # python dbexwp.py -u http://www.xzy.com/
-# Salim Alk
+# AUTHOR :
+      # Salim Alk
