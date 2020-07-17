@@ -4,7 +4,7 @@ SIMPLE TOOL Programmed By Python  SEARCH For Wordpress Database Backup And Infor
       # TOOL IS FASTES
 # Install :
     # Commands
- - pip install -r modules.txt
+ - pip install -r requirements.txt
  - git clone https://github.com/SalimAlk/WP-DB-EX.git
 
 -------/
