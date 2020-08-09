@@ -60,7 +60,7 @@ def searching(dirc):
 			with open("rezlt/db-dirc.txt", "w") as f:
 				f.write('\n'+hostage)
 		else:
-			print(r+" [+] No : "+w+hostage)
+			pass
 	except KeyboardInterrupt:
 		exit()
 def all():
@@ -72,37 +72,7 @@ def all():
 all()
 try:
 	TEXTList = open('db.txt', 'r').read().splitlines()
-	p = Pool(1)
+	p = Pool(15)
 	p.map(searching, TEXTList)
 except KeyboardInterrupt:
 	exit()
-			for i in op:
-				for i in i.split():
-					hostage = target+"/"+i
-					Squezy = requests.get(hostage, allow_redirects=False)
-					if Squezy.status_code==200:
-						print(r+" [+] Dumped : "+w+hostage)
-						with open("rezlt/db-dirc.txt", "w") as f:
-							f.write('\n'+hostage)
-					else:
-						pass
-		except KeyboardInterrupt:
-			print(" Can't Exist Beacuse Multi ")
-			exit()
-	except requests.exceptions.MissingSchema:
-		exit()
-def multi():
-	try:
-		TEXTList = open('db.txt', 'r').read().splitlines()
-		p = Pool(5)
-		p.map(searching, TEXTList)
-	except KeyboardInterrupt:
-		exit()
-def all():
-	os.system("clear")
-	#time.sleep(4)
-	print(printf)
-	pf()
-	serv()
-	multi()
-all()
