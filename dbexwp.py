@@ -51,10 +51,31 @@ def serv():
 			print (" Can't Connect Host Add http:// to URL ")
 	except requests.exceptions.ReadTimeout:
 		print(w+target+g+' Timeout ')
-def searching(Squezy):
+def searching(dirc):
 	try:
-		try:
-			op = open('db.txt', 'r')
+		hostage = target+"/"+dirc
+		Squezy = requests.get(hostage, allow_redirects=False)
+		if Squezy.status_code==200:
+			print(r+" [+] Dumped : "+w+hostage)
+			with open("rezlt/db-dirc.txt", "w") as f:
+				f.write('\n'+hostage)
+		else:
+			print(r+" [+] No : "+w+hostage)
+	except KeyboardInterrupt:
+		exit()
+def all():
+	os.system("clear")
+	#time.sleep(4)
+	print(printf)
+	pf()
+	serv()
+all()
+try:
+	TEXTList = open('db.txt', 'r').read().splitlines()
+	p = Pool(1)
+	p.map(searching, TEXTList)
+except KeyboardInterrupt:
+	exit()
 			for i in op:
 				for i in i.split():
 					hostage = target+"/"+i
